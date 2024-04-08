@@ -1,0 +1,36 @@
+Sure! Here's an example of HTML code for form validation:
+
+```html
+<form onsubmit="return validateForm()">
+  <input type="text" id="name" required>
+  <input type="email" id="email" required>
+  <button type="submit">Submit</button>
+</form>
+
+<script>
+  function validateForm() {
+    var nameInput = document.getElementById("name");
+    var emailInput = document.getElementById("email");
+
+    if (nameInput.value === "") {
+      alert("Please enter your name");
+      return false;
+    }
+
+    if (emailInput.value === "") {
+      alert("Please enter your email");
+      return false;
+    }
+
+    // Additional validation logic can be added here
+
+    return true;
+  }
+</script>
+```
+
+In this example, the `onsubmit` attribute of the form is set to the `validateForm()` function. This function is called when the form is submitted. Inside the function, we retrieve the values of the name and email inputs and perform validation checks.
+
+If the name input is empty, an alert is displayed asking the user to enter their name. Similarly, if the email input is empty, an alert is displayed asking the user to enter their email.
+
+You can add additional validation checks based on your specific requirements inside the `validateForm()` function.
